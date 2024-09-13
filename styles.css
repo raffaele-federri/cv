@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
+*{
+    margin: 0;
+}
 body {
-    background: rgb(239, 242, 244);
+    background: rgba(50, 48, 49, 1);
     font-family: "Poppins" , sans-serif;
 
 }
 
 body h2 {
-    font-size: 14px;
+   font-size: 14px;
    font-weight: 600;
 }
 
@@ -22,6 +24,9 @@ h2 {
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 80px;
+    margin-right: 80px;
     background: #fff;
     border-radius: 4px;
     border: 4px;
@@ -30,8 +35,46 @@ h2 {
     background-color: rgba(10, 10, 10, 0,1);
 }
 
+.card1 ,.card2, .card3 {
+    /* flex: 1; */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 5px; 
+    margin-right: 5px;
+    background: #fff;
+    border-radius: 4px;
+    border: 4px;
+    border-color: rgb(0, 0, 0);
+    /* background-color: #45b9ac; */
+    background-color: rgba(10, 10, 10, 0,1);
+}
+
+.flex1 {
+    flex:2
+}
+
+.flex3 {
+    flex:6
+}
+.flex3 {
+    flex:2
+}
+
+.row{
+    margin-left: 75px;
+    margin-right: 75px;
+    display: flex;
+}
+
 .backgroundpickture {
-    background-image: url("https://t4.ftcdn.net/jpg/02/55/74/39/240_F_255743996_RNm9QJcQkBQGLVTUOljw7i68jK2C8NsP.jpg");
+    /* background-image: url("https://t4.ftcdn.net/jpg/02/55/74/39/240_F_255743996_RNm9QJcQkBQGLVTUOljw7i68jK2C8NsP.jpg"); */
+    background: rgba(50, 48, 49, 1);
+    padding: 10px ;
+    color: #fff;
+    margin-left: 80px;
+    margin-right: 80px;
 }
 
 .image {
@@ -40,7 +83,6 @@ h2 {
     overflow: hidden;
     background: red;
     border-radius: 12px;
-    
 }
 
 table, th, td {
@@ -106,10 +148,9 @@ table, th, td {
 
 .btn:hover {
     opacity: .8;
-    color: red;
 }
 
 .btn:active {
     opacity: .8;
-    color: blue;
+    color: #fff;
 }
