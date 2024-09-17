@@ -10,8 +10,43 @@ body {
     background: rgba(50, 48, 49, 1);
 }
 
+.supportbnt {
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%; /* Ensures the button is circular */
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2em;
+    /* border: none; */
+    border: 4px solid green;
+    background: radial-gradient(
+        circle, 
+        #006400, /* DarkGreen */
+        #228B22, /* ForestGreen */
+        #2E8B57, /* SeaGreen */
+        #3CB371, /* MediumSeaGreen */
+        #00FF7F, /* SpringGreen */
+        #7CFC00, /* LawnGreen */
+        #00FA9A, /* MediumSpringGreen */
+        #006400  /* DarkGreen (repeated) */
+
+    );
+    background-size: 200% 200%; /* Make the gradient larger than the button */
+    animation: gradient-animation 5s linear infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
 .container {
-    
    width: 300px; 
    display: inline-block;
     /* Set width to fit in one row */
@@ -20,9 +55,8 @@ body {
    /* background-color: lightcoral; */
 }
 
-.transparentcontainer {
-    position: absolute;
-    right: 0;
+/* HEADER */
+.header {    
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 10px;
@@ -34,22 +68,49 @@ body {
     color: #fff;
    
 }
-
 .info {
     display: flex;
 }
-
 .text {
     width: 600px;
     margin-left: 30px;
 }
+
+@media (max-width: 700px) {
+    .info {
+        display: block;
+        text-align: center;
+    }
+    .text {
+    width: 400px;
+    margin: 0 0 0 0;
+   
+}
+}
+@media (max-width: 600px) {
+    .info {
+        display: block;
+        text-align: center;
+    }
+    .text {
+    width: 300px;
+    margin: none;
+    font-size: 14px;   
+}
+body{
+    font-size: 14px;
+}
+}
+
+/* /HEADER */
+
+
 
 .enterarea {
    position: relative;
    height: 40px;
    line-height: 40px; 
    margin: 10px 0;
-   /* background: red; */
 }
 
 input  {
@@ -107,19 +168,18 @@ input:valid{
     background-color: rgba(10, 10, 10, 0,1);
 }
 
-.card1 ,.card2, .card3 {
-    /* flex: 1; */
+.card1{
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 30px;
     padding-right: 30px;
     margin-left: 5px; 
     margin-right: 5px;
+    margin-top: 10px;
     background: #fff;
     border-radius: 4px;
     border: 4px;
     border-color: rgb(0, 0, 0);
-    /* background-color: #45b9ac; */
     background-color: rgba(10, 10, 10, 0,1);
 }
 
@@ -141,14 +201,29 @@ input:valid{
     display: flex;
 }
 
-/* .backgroundpickture {
-
-    background: rgba(50, 48, 49, 1);
-    padding: 10px ;
-    color: #fff;
-    margin-left: 80px;
+@media (max-width: 1050px) {
+    .row {
+        margin-left: 80px;
     margin-right: 80px;
-} */
+      flex-direction: column; /* Stacks containers vertically */
+      align-items: center;
+    }
+
+    .card1{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-top: 10px;
+        width: 100%;
+        background: #fff;
+        border-radius: 4px;
+        border: 4px;
+        border-color: rgb(0, 0, 0);
+        background-color: rgba(10, 10, 10, 0,1);
+    }
+ 
+}
 
 .image {
     height: 130px; 
@@ -196,12 +271,6 @@ table, th, td {
     font-size: 14px;
     transition: background-position 1s ease;
 }
-
-@keyframes gradient-animation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
 
 #insta:hover { 
     background-position: 100% 0; 
